@@ -6,10 +6,42 @@
     <title>Document</title>
 </head>
 <body>
-    <link rel="stylesheet" href="boton.css">
     <button class="boton2">boton efecto</button>
  <button class="boton">BOTON:HOVER</button>
  <button class="tarjeta">@keyframes</button>
   <button class="badge-nuevo">@keyframes</button>
+  <style>
+    .boton2{
+background: #1aeb47;
+transition: background .3s ease, transform .3s ease;
+}
+.boton {
+background: #7c3aed;
+transition: background .3s ease, transform .6s ease;
+}
+
+.boton:hover {
+background: #a855f7;
+transform: translateY(-5px);
+box-shadow: 0 6px 14px rgba(124,58,237,.35);
+}
+
+@keyframes aparecer {
+from { opacity:0; transform:translateY(20px); }
+to { opacity:1; transform:translateY(0); }
+}
+.tarjeta {
+    background-color: brown;
+animation: aparecer .6s ease-out;
+}
+@keyframes pulso {
+0%, 100% { transform:scale(1); }
+50% { transform:scale(1.06); }
+}
+.badge-nuevo {
+    background-color: blue;
+animation: pulso 1.5s ease-in-out infinite;
+}
+  </style>
 </body>
 </html>
